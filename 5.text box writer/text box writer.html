@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>testing scripts</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 80px;
+			background: gray;
+			padding: 20px;
+		}
+	</style>
+	<script> 
+		
+	</script>
+  </head>
+  <body onload="goText()">
+	
+	<div>
+	  <p id="our_text"></p>
+	</div>
+ 
+	<script>
+		function goText() {
+			var x = setInterval(writeLetter,500);
+		}
+		var text1 = 'hello my friends:)';
+		var content = '';
+		var k = 0;	
+		
+		function writeLetter() {
+			var ourText = document.getElementById('our_text');
+			content+=text1[k];
+			ourText.innerHTML=content;
+			k = k + 1;
+			if(k==text1.length) {
+			k=0; content='';
+			}
+		}	
+	</script>
+ </body>
+</html>

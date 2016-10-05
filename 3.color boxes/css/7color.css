@@ -1,0 +1,36 @@
+#main {
+margin:0 auto;
+margin-top:40px;
+margin-bottom:40px;
+height:1955px;
+width:935px;
+background-color: green;}
+
+.kyb1 {
+width:85px;
+height:85px;
+background:brown;
+float:left;
+box-shadow:0 0 3px white;
+}
+
+#kyb {
+width:85px;
+height:85px;
+background:brown;
+display: inline-block;
+}
+
+footer {
+margin: 0 auto;
+width:70px;
+height:30px;
+background-color:#70DB70;
+text-align:center;
+font-family:Garamond, serif;
+font-size:25px;
+
+}
+a {
+color:black;
+}

@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+ <title>hello world</title>
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="A journey of a thousand miles begins with a single step.">
+ <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="JS/jquery.js"> </script>
+ <script type="text/javascript" src="JS/jquery-ui.js"> </script>
+ 
+ <style type="text/css">
+	
+	* {
+	margin:0;
+	padding:0;
+	}
+	
+	body {
+	font:62.5% Time new romans, serif;
+	background-image:url(images/box2.jpg);
+	}
+	
+	#wrapper {
+	padding:15px;
+	width:70em;
+	margin:0 auto;
+	}
+	
+	#box {
+	width:40px;
+	height:40px;
+	display:block;
+	position:relative;
+	-webkit-animation: rotate 0.5s;
+	animation: rotate 0.5s;	
+	display:none;
+	}
+	
+	#bigger_div {
+	width:68em;
+	height:45em;
+	border:3px solid #316785;
+	margin:0 auto;
+	background-color:white;
+	border-radius:10%;
+	}
+	
+	h1 {
+	margin:auto;
+	width:11em;
+	color:white;
+	font-size:4.5em;
+	text-align:center;
+	-webkit-animation: rotate 4.5s;
+	animation: rotate 4.5s;	
+	}
+	
+	#for_h {
+	margin: 0 auto;
+	}
+	
+	#music {
+	color:white;
+	font-size:4.5em;
+	text-align:center;
+	}
+	
+	#message {
+	position:relative;
+	width:15em;
+	height:15em;
+	margin:auto;
+	background-color:#094261;
+	border-radius:30%;
+	top:15em;
+	line-height:15em;
+	text-align:center;
+	}
+	
+	#message a{
+	background-color:#316785;
+	padding:1em;
+	border-radius:30%;
+	font-size:2em;
+	color:white;
+	text-decoration:none;
+	cursor:pointer;
+	}
+	
+	#message a:hover{
+	background-color:white;
+	color:#094261;
+	font-weight:bold;
+	}
+	
+	#timer, #timer2 {
+	float:left;
+	position:relative;
+	top:-1.5em;
+	left:2em;
+	background-color:#316785;
+	height:3em;
+	width:10em;
+	border-radius:60%;
+	margin:0;
+	color:white;
+	font-size:1.2em;
+	margin-bottom:5px;
+	}
+	
+	#timer2 {
+	line-height:3em;
+	text-align:center;
+	float:right;
+	margin-right:3.3em;
+	}
+	
+	#numbers  {
+	text-align:center;
+	line-height:3em;
+	}
+	
+	#forImg {
+	margin:2em;
+	float:left;
+	}
+	
+	#forImg img{
+	margin-right:-0.3em;
+	border-radius:20%;
+	}
+	
+	@-webkit-keyframes rotate { 50% { transform: rotate(90deg); } 100% { transform: rotate(0);} }
+	
+	@-moz-keyframes rotate { 50% { transform: rotate(90deg); } 100% { transform: rotate(0);} }
+	
+	@-o-keyframes rotate { 50% { transform: rotate(90deg); } 100% { transform: rotate(0); } }
+	
+	keyframes rotate { 50% { transform: rotate(90deg);} 100% {  transform: rotate(0); }}
+	
+	</style>
+	
+	<script type="text/javascript" src="JS/jquery.js"> </script>
+	<script type="text/javascript" src="JS/jquery-ui.js"> </script>
+
+</head>
+<body>
+
+<div id = "forImg" >     <!-- div dlja kartunky powty -->
+       <a href="mailto:wasyl.hutnyk@gmail.com" title="write me email:)" id="a_img">	   
+	   <img src="images/hallo.png" width="45" height="45" alt="reaction game" />
+	   </a>
+	   <a href="https://twitter.com" title="me on twitter:)" id="a_img">
+	   <img src="images/pobrane.png" width="45" height="45" alt="reaction game" />
+	   </a>
+	    <a href="https://www.facebook.com/wasyl.gutnyk" title="me on facebook:)" id="a_img">
+	   <img src="images/facebook.png" width="45" height="45" alt="reaction game" />
+	   </a>
+</div>
+
+<div id="wrapper">
+	
+	<div id="for_h">
+		<h1 id="header_main"> WeLcOmE everyBODY! :) </h1>
+	</div>
+	
+	<div id="bigger_div">
+	
+		<div id="timer"> 
+			<p id="numbers">33</p>
+		</div>
+		
+		<div id="timer2"> 
+			<p>Your time: <span id="time"> 0 sec </span> </p>
+		</div>
+		
+		<div id="box"></div>
+		
+		<div id="message"> 
+			<div id="align_div"><a id="first" > Play </a></div>		
+		</div>
+		
+		<script>
+				function timer_func() {
+				var b = setInterval(function() { 
+				var x = document.getElementById("numbers").innerHTML;
+				x=x-1;
+				document.getElementById("numbers").innerHTML=x;
+				
+				if(parseInt(x)<=0)
+				{clearInterval(b);
+				document.getElementById('timer').style.display="none";
+				document.getElementById('timer2').style.display="none";
+				document.getElementById('message').style.display="block";
+				document.getElementById('first').innerHTML="ag:)in?";
+				
+					if (document.getElementById('first').innerHTML = "ag:)in?")  {
+					document.getElementById('first').href="javascript:location.reload(true)";
+					}
+			
+				document.getElementById('box').style.display="none";
+				document.getElementById('header_main').style.width="14em";
+				document.getElementById('header_main').innerHTML=" Good work! Your score: " + target + "</br> averege time: " + (average_time/target).toFixed(2);
+				document.getElementById('header_main').style.borderRadius="20%";
+				
+				<!--document.location.reload();-->
+				}
+				}
+				, 1000);}
+		
+				document.getElementById('first').onclick = function() {
+				document.getElementById('message').style.display="none";
+				
+				makeBox();
+				timer_func();
+				}	
+		</script>
+		
+	</div>
+	
+	<script type="text/javascript">
+		
+		var clickedTime; var createdTime; var reactionTime; var target = 0; var average_time = 0;
+		
+		function makeBox() {
+		
+			var time = Math.random(time);
+			time = time*1001;
+			time = Math.floor(time);
+			
+			setTimeout(function() {
+			
+			createdTime=Date.now();
+			
+			var random_color = "#"+Math.random().toString(16).slice(2,8);
+			
+			var random_position_top = parseInt(Math.random()*380) + "px";
+			var random_position_left = parseInt(Math.random()*630) + "px";
+			
+			var random_circle = Math.random();
+			
+			if(random_circle<0.5) {
+				document.getElementById('box').style.borderRadius="50%";
+				}
+			
+				else {
+				document.getElementById('box').style.borderRadius="0%";
+				}	
+			
+			document.getElementById('box').style.left= random_position_left; 
+			
+			document.getElementById('box').style.top= random_position_top;
+			
+			document.getElementById('box').style.backgroundColor=random_color;
+			
+			document.getElementById('box').style.display="block";
+			
+			}, time);
+		
+		}
+		
+		document.getElementById('box').onclick = function() {
+			
+			clickedTime=Date.now();
+			
+			reactionTime = (clickedTime - createdTime) / 1000;
+			
+			document.getElementById('time').innerHTML = reactionTime;
+			
+			this.style.display="none";
+			
+			target++;
+			
+			average_time += reactionTime;
+			
+			makeBox();
+		
+		}
+			
+			
+		
+	</script>
+
+	<script>
+			
+		$( "#box" ).click(function() {
+		$( "#box" ).toggle( "explode" );
+		});
+		
+	</script>
+	
+	<div id="music">
+		
+		<audio controls autoplay>
+			<source src="Tango With Lions - Right From The Start [с сайта www.ololo.fm].ogg">
+			<source src="Tango With Lions - Right From The Start [с сайта www.ololo.fm].mp3">
+		</audio>
+	
+	</div>
+	
+</div>
+
+</div>
+
+</body>
+</html>

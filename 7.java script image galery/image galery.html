@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>testing scripts</title>
+	<style type="text/css">
+	body {
+ 		font-family: "Helvetica", "Arial", serif;
+		color: #006666;
+		background-color: #E6F0F0;
+		margin: 1em 5%;
+	}
+	
+	ul {
+		padding: 0;
+	}
+	
+	ul li {
+		list-style: none;
+		display: inline-block;
+		border-left: 1px solid green;
+		padding-left: 10px;
+	}
+	
+	ul li:first-child {
+		border: none;
+	}
+
+	a {
+		color: #FF6666;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+
+	</style>
+  </head>
+  <body>
+	<h1>Tiny galery</h1>
+    
+	<ul>
+		<li><a href="images/fireworks.jpg" onclick="showPic(this); return false;" title="beautiful fireworks">Fireworks</a></li> <!--we set return true. to deny default link behavior -->
+		<li><a href="images/coffee.jpg" onclick="showPic(this); return false;" title="beautiful coffee">Coffee</a></li>
+		<li><a href="images/rose.jpg" onclick="showPic(this); return false;" title="beautiful rose">Rose</a></li>	
+		<li><a href="images/bigben.jpg" onclick="showPic(this); return false;" title="beautiful bigben">Bigben</a></li>
+	</ul>
+	
+	<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" /> 
+	
+	<p id="description">Choose an image.</p> 
+	
+	<script> 
+		
+	</script>
+	<script type="text/JavaScript" src="scripts/showPic.js"> </script>
+ 
+ </body>
+</html>
